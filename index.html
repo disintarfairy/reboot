@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Margorine's Blog</title>
   <style>
-    /* Сброс стандартных стилей */
+    /* Reset Styles */
     * {
       margin: 0;
       padding: 0;
@@ -15,7 +15,6 @@
       font-family: 'Arial', sans-serif;
       background-color: #fff;
       color: #000;
-      line-height: 1.6;
     }
 
     header {
@@ -29,7 +28,6 @@
     header .logo {
       font-weight: bold;
       font-size: 24px;
-      text-transform: uppercase;
     }
 
     header nav {
@@ -43,7 +41,6 @@
       color: #000;
       font-size: 14px;
       font-weight: bold;
-      text-transform: uppercase;
     }
 
     header nav .cta-button {
@@ -54,133 +51,135 @@
     }
 
     /* Hero Section */
-    .hero-section {
-      padding: 60px 40px;
+    .hero {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+      align-items: center;
+      padding: 60px 40px;
+      gap: 20px;
     }
 
-    .hero-section .text {
-      max-width: 50%;
+    .hero .text {
+      flex: 1;
     }
 
-    .hero-section .text h1 {
+    .hero .text h1 {
       font-size: 48px;
       font-weight: bold;
       margin-bottom: 20px;
     }
 
-    .hero-section .text p {
+    .hero .text p {
       font-size: 18px;
-      color: #555;
       line-height: 1.8;
+      color: #555;
     }
 
-    .hero-section .image {
-      max-width: 40%;
+    .hero .image {
+      flex: 1;
     }
 
-    .hero-section .image img {
+    .hero .image img {
       width: 100%;
-      height: auto;
       border-radius: 10px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
     /* Case Section */
-    .case-section {
-      padding: 40px;
+    .cases {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+      padding: 40px 20px;
     }
 
-    .case-card {
+    .case {
+      position: relative;
+      overflow: hidden;
       border: 1px solid #ddd;
       border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .case-card:hover {
-      transform: translateY(-10px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .case-card img {
+    .case img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .case-card .content {
-      padding: 20px;
-      background: #fdfdfd;
+    .case .content {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-align: left;
     }
 
-    .case-card .content h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
+    .case .content h3 {
+      font-size: 16px;
+      font-weight: bold;
     }
 
-    .case-card .content span {
-      display: inline-block;
+    .case .content span {
       font-size: 14px;
-      background: #eee;
-      padding: 5px 10px;
-      border-radius: 10px;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Margorine</div>
+    <div class="logo">MARGORINE</div>
     <nav>
-      <a href="#">Digital Studio</a>
-      <a href="#">Cases</a>
-      <a href="#">Contacts</a>
-      <a href="#" class="cta-button">Start the project</a>
+      <a href="#">DIGITAL STUDIO</a>
+      <a href="#">CASES</a>
+      <a href="#">CONTACTS</a>
+      <a href="#" class="cta-button">START THE PROJECT</a>
     </nav>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="text">
-        <h1>Margorine's Blog</h1>
-        <p>Explore the world of AI and creativity through insightful articles, unique case studies, and practical tools for innovators and thinkers.</p>
-      </div>
-      <div class="image">
-        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Blog Hero Image">
-      </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="text">
+      <h1>Margorine's Blog</h1>
+      <p>Explore the world of AI and creativity through insightful articles, unique case studies, and practical tools for innovators and thinkers.</p>
+    </div>
+    <div class="image">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Hero Image">
+    </div>
+  </section>
 
-    <!-- Case Section -->
-    <section class="case-section">
-      <div class="case-card">
-        <img src="https://images.unsplash.com/photo-1581092337775-0d174c7fdbb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case 1">
-        <div class="content">
-          <h3>Project: AI Creativity</h3>
-          <span>Web 3.0</span>
-        </div>
+  <!-- Case Section -->
+  <section class="cases">
+    <div class="case">
+      <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 1">
+      <div class="content">
+        <h3>Hunting for Financial Stocks</h3>
+        <span>GAME</span>
       </div>
-      <div class="case-card">
-        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case 2">
-        <div class="content">
-          <h3>Project: Future Innovation</h3>
-          <span>Innovation</span>
-        </div>
+    </div>
+    <div class="case">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 2">
+      <div class="content">
+        <h3>Alpindustria</h3>
+        <span>E-COMMERCE</span>
       </div>
-      <div class="case-card">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case 3">
-        <div class="content">
-          <h3>Project: AI in Marketing</h3>
-          <span>E-commerce</span>
-        </div>
+    </div>
+    <div class="case">
+      <img src="https://images.unsplash.com/photo-1573497019414-cbc22c1ff5d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 3">
+      <div class="content">
+        <h3>Zen</h3>
+        <span>LANDING PAGE</span>
       </div>
-    </section>
-  </main>
+    </div>
+    <div class="case">
+      <img src="https://images.unsplash.com/photo-1559028012-d2f599f9a4b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 4">
+      <div class="content">
+        <h3>IOGINALITY</h3>
+        <span>WEB 3.0</span>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
