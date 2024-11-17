@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Margorine's AI Blog</title>
+  <title>Margorine's Blog</title>
   <style>
     /* Сброс стандартных стилей */
     * {
@@ -13,7 +13,7 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #fdfdfd;
+      background-color: #fff;
       color: #000;
       line-height: 1.6;
     }
@@ -23,11 +23,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      background: #fff;
-      z-index: 1000;
+      border-bottom: 1px solid #ddd;
     }
 
     header .logo {
@@ -38,6 +34,7 @@
 
     header nav {
       display: flex;
+      align-items: center;
       gap: 20px;
     }
 
@@ -46,95 +43,94 @@
       color: #000;
       font-size: 14px;
       font-weight: bold;
+      text-transform: uppercase;
     }
 
     header nav .cta-button {
       border: 1px solid #000;
       padding: 8px 16px;
       border-radius: 20px;
-      transition: background 0.3s ease, color 0.3s ease;
+      text-transform: uppercase;
     }
 
-    header nav .cta-button:hover {
-      background: #000;
-      color: #fff;
-    }
-
+    /* Hero Section */
     .hero-section {
+      padding: 60px 40px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #f4f4f9, #e8e8f0);
+      justify-content: space-between;
+      background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
     }
 
     .hero-section .text {
-      flex: 1;
-      max-width: 500px;
+      max-width: 50%;
     }
 
     .hero-section .text h1 {
-      font-size: 42px;
+      font-size: 48px;
       font-weight: bold;
       margin-bottom: 20px;
     }
 
     .hero-section .text p {
       font-size: 18px;
-      line-height: 1.8;
       color: #555;
+      line-height: 1.8;
     }
 
     .hero-section .image {
-      flex: 1;
+      max-width: 40%;
     }
 
     .hero-section .image img {
       width: 100%;
+      height: auto;
       border-radius: 10px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .project-grid {
+    /* Case Section */
+    .case-section {
+      padding: 40px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      padding: 40px 20px;
     }
 
-    .project-card {
-      border: 1px solid #eee;
+    .case-card {
+      border: 1px solid #ddd;
       border-radius: 10px;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .project-card:hover {
+    .case-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .project-card img {
+    .case-card img {
       width: 100%;
       height: auto;
+      display: block;
     }
 
-    .project-card .content {
+    .case-card .content {
       padding: 20px;
+      background: #fdfdfd;
     }
 
-    .project-card .content h3 {
+    .case-card .content h3 {
       font-size: 18px;
       margin-bottom: 10px;
     }
 
-    .project-card .content span {
+    .case-card .content span {
       display: inline-block;
       font-size: 14px;
-      background: #ddd;
+      background: #eee;
       padding: 5px 10px;
       border-radius: 10px;
-      margin-top: 10px;
     }
   </style>
 </head>
@@ -142,46 +138,46 @@
   <header>
     <div class="logo">Margorine</div>
     <nav>
-      <a href="#">About</a>
-      <a href="#">AI Trends</a>
-      <a href="#">Blog</a>
-      <a href="#">Contact</a>
-      <a href="#" class="cta-button">Subscribe</a>
+      <a href="#">Digital Studio</a>
+      <a href="#">Cases</a>
+      <a href="#">Contacts</a>
+      <a href="#" class="cta-button">Start the project</a>
     </nav>
   </header>
+
   <main>
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="text">
         <h1>Margorine's Blog</h1>
-        <p>Explore the intersection of AI and creativity. Dive into insights, tools, and trends that empower creators and innovators in the world of artificial intelligence.</p>
+        <p>Explore the world of AI and creativity through insightful articles, unique case studies, and practical tools for innovators and thinkers.</p>
       </div>
       <div class="image">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Margorine's Creativity">
+        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Blog Hero Image">
       </div>
     </section>
 
-    <!-- Project Grid -->
-    <section class="project-grid">
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1581092337775-0d174c7fdbb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="AI in Design">
+    <!-- Case Section -->
+    <section class="case-section">
+      <div class="case-card">
+        <img src="https://images.unsplash.com/photo-1581092337775-0d174c7fdbb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case 1">
         <div class="content">
-          <h3>Project: AI in Design</h3>
-          <span>Design</span>
+          <h3>Project: AI Creativity</h3>
+          <span>Web 3.0</span>
         </div>
       </div>
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="AI in Marketing">
+      <div class="case-card">
+        <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case 2">
+        <div class="content">
+          <h3>Project: Future Innovation</h3>
+          <span>Innovation</span>
+        </div>
+      </div>
+      <div class="case-card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case 3">
         <div class="content">
           <h3>Project: AI in Marketing</h3>
-          <span>Marketing</span>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Future AI Applications">
-        <div class="content">
-          <h3>Project: Future AI</h3>
-          <span>Innovation</span>
+          <span>E-commerce</span>
         </div>
       </div>
     </section>
