@@ -57,31 +57,36 @@
       color: #fff;
     }
 
-    /* Case Section */
+    /* Main Section */
     .cases {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-auto-rows: 300px;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
       padding: 40px;
-    }
-
-    .case-large {
-      grid-column: span 2;
-      grid-row: span 2;
-      position: relative;
     }
 
     .case {
       position: relative;
       overflow: hidden;
       border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .case img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .case:hover img {
+      transform: scale(1.1);
+    }
+
+    .case:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .case .content {
@@ -121,39 +126,25 @@
 
   <!-- Case Section -->
   <section class="cases">
-    <div class="case case-large">
+    <div class="case">
       <img src="stock.jpg" alt="Exploring AI">
       <div class="content">
-        <h3>AI IN TRAVEL PLANNING</h3>
-        <span>How technology redefines exploration</span>
+        <h3>AI IN TRAVEL</h3>
+        <span>Discover how AI enhances your adventures</span>
       </div>
     </div>
     <div class="case">
-      <img src="alpin.png" alt="AI in Remote Work">
+      <img src="alpin.png" alt="Remote Work">
       <div class="content">
         <h3>REMOTE WORK SPACES</h3>
-        <span>Digital nomadism with AI tools</span>
+        <span>Balancing AI tools with stunning views</span>
       </div>
     </div>
     <div class="case">
-      <img src="zen.png" alt="Mindful Travel">
+      <img src="zen.png" alt="Zen Travel">
       <div class="content">
         <h3>MINDFUL TRAVEL</h3>
-        <span>AI-guided routes for self-discovery</span>
-      </div>
-    </div>
-    <div class="case">
-      <img src="image4.jpg" alt="Sustainable Tech">
-      <div class="content">
-        <h3>SUSTAINABLE AI</h3>
-        <span>Eco-conscious travel powered by AI</span>
-      </div>
-    </div>
-    <div class="case">
-      <img src="image5.jpg" alt="Future of Cities">
-      <div class="content">
-        <h3>SMART CITIES</h3>
-        <span>Integrating AI into urban exploration</span>
+        <span>Self-discovery through AI-guided journeys</span>
       </div>
     </div>
   </section>
