@@ -60,9 +60,16 @@
     /* Main Section */
     .cases {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-auto-rows: 300px;
       gap: 20px;
       padding: 40px;
+    }
+
+    .case-large {
+      grid-column: span 2;
+      grid-row: span 2;
+      position: relative;
     }
 
     .case {
@@ -126,25 +133,25 @@
 
   <!-- Case Section -->
   <section class="cases">
-    <div class="case">
+    <div class="case case-large">
       <img src="stock.jpg" alt="Exploring AI">
       <div class="content">
-        <h3>AI IN TRAVEL</h3>
-        <span>Discover how AI enhances your adventures</span>
+        <h3>FINDING AI IN TRAVEL</h3>
+        <span>Discover the beauty of technology on the road</span>
       </div>
     </div>
     <div class="case">
-      <img src="alpin.png" alt="Remote Work">
+      <img src="alpin.png" alt="City Life">
       <div class="content">
-        <h3>REMOTE WORK SPACES</h3>
-        <span>Balancing AI tools with stunning views</span>
+        <h3>URBAN AI</h3>
+        <span>How AI changes our perspective of cities</span>
       </div>
     </div>
     <div class="case">
-      <img src="zen.png" alt="Zen Travel">
+      <img src="zen.png" alt="Self-Reflection">
       <div class="content">
-        <h3>MINDFUL TRAVEL</h3>
-        <span>Self-discovery through AI-guided journeys</span>
+        <h3>MINDFUL EXPLORATION</h3>
+        <span>AI guides for personal growth and adventure</span>
       </div>
     </div>
   </section>
