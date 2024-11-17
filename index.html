@@ -4,19 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Margorine's AI Blog</title>
   <style>
-    /* Сброс стандартных стилей */
+    /* Общие стили */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Основные стили */
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #f4f4f9, #e8e8f0);
+      background-color: #fff;
       color: #000;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
@@ -24,8 +24,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid #eee;
     }
 
     header .logo {
@@ -60,90 +59,107 @@
     }
 
     main {
-      text-align: center;
-      padding: 50px 20px;
-      animation: fadeIn 2s ease-in-out;
+      margin: 40px 20px;
     }
 
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .hero-section .text {
+      flex: 1;
+      max-width: 500px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero-section .text h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero-section .text p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .hero-section .image {
+      flex: 1;
+      animation: slideIn 1.5s ease;
+    }
+
+    .hero-section .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Карточки */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card .content {
+      padding: 20px;
+    }
+
+    .card .content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card .content p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Анимации */
     @keyframes fadeIn {
       from {
         opacity: 0;
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
-      }
-    }
-
-    .left-text {
-      margin-bottom: 40px;
-      font-size: 20px;
-      animation: slideInLeft 1.5s ease-in-out;
-    }
-
-    @keyframes slideInLeft {
-      from {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    .center-image img {
-      width: 300px;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% {
         transform: translateY(0);
       }
-      50% {
-        transform: translateY(-20px);
-      }
     }
 
-    .large-text {
-      font-size: 48px;
-      font-weight: bold;
-      margin-top: 20px;
-      animation: textGlow 1.5s ease-in-out infinite;
-    }
-
-    @keyframes textGlow {
-      0% {
-        color: #000;
-        text-shadow: 0 0 5px #000;
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
       }
-      50% {
-        color: #555;
-        text-shadow: 0 0 15px #888;
-      }
-      100% {
-        color: #000;
-        text-shadow: 0 0 5px #000;
-      }
-    }
-
-    .rotating-text {
-      margin-top: 40px;
-      font-size: 14px;
-      text-transform: uppercase;
-      color: #555;
-      animation: rotateText 5s linear infinite;
-    }
-
-    @keyframes rotateText {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
   </style>
@@ -160,18 +176,41 @@
     </nav>
   </header>
   <main>
-    <div class="left-text">
-      <p>Welcome to Margorine's blog, where the magic of artificial intelligence meets creativity. Dive into the latest trends, tools, and breakthroughs in AI, crafted for thinkers, dreamers, and creators.</p>
-    </div>
-    <div class="center-image">
-      <img src="https://images.unsplash.com/photo-1551524552-48b1a6dbd0cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDI4fHxhaXxlbnwwfHx8fDE2ODcxMzQwNDI&ixlib=rb-4.0.3&q=80&w=400" alt="AI and Creativity">
-    </div>
-    <div class="large-text">
-      Margorine's AI Blog
-    </div>
-    <div class="rotating-text">
-      Exploring creativity through AI
-    </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="text">
+        <h1>Welcome to Margorine's AI Blog</h1>
+        <p>Discover the intersection of creativity and technology with insights, tools, and trends in artificial intelligence, curated for creators, thinkers, and innovators.</p>
+      </div>
+      <div class="image">
+        <img src="https://images.unsplash.com/photo-1612832020978-d7d4c5bfadf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHByb2R1Y3R8ZW58MHx8fHwxNjg3MTI3OTI0&ixlib=rb-4.0.3&q=80&w=800" alt="AI and Creativity">
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="AI Design">
+        <div class="content">
+          <h3>AI in Design</h3>
+          <p>Explore how AI is shaping the future of design, making it more intuitive and accessible.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1532619187600-d7448a0f27db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="AI and Art">
+        <div class="content">
+          <h3>AI in Art</h3>
+          <p>Learn how artists are leveraging AI to create breathtaking masterpieces.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581291519195-ef11498d1cf4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Future of AI">
+        <div class="content">
+          <h3>The Future of AI</h3>
+          <p>Get insights into the future of AI and its potential impact on our daily lives.</p>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
