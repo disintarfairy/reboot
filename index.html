@@ -13,7 +13,7 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #fff;
+      background-color: #f9f9f9;
       color: #000;
     }
 
@@ -23,11 +23,13 @@
       align-items: center;
       padding: 20px 40px;
       border-bottom: 1px solid #ddd;
+      background: #fff;
     }
 
     header .logo {
       font-weight: bold;
       font-size: 24px;
+      text-transform: uppercase;
     }
 
     header nav {
@@ -41,13 +43,19 @@
       color: #000;
       font-size: 14px;
       font-weight: bold;
+      text-transform: uppercase;
     }
 
     header nav .cta-button {
       border: 1px solid #000;
       padding: 8px 16px;
-      border-radius: 20px;
-      text-transform: uppercase;
+      border-radius: 25px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    header nav .cta-button:hover {
+      background: #000;
+      color: #fff;
     }
 
     /* Hero Section */
@@ -56,7 +64,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 60px 40px;
-      gap: 20px;
+      gap: 40px;
     }
 
     .hero .text {
@@ -77,28 +85,35 @@
 
     .hero .image {
       flex: 1;
+      display: flex;
+      justify-content: center;
     }
 
     .hero .image img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
     /* Case Section */
     .cases {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      padding: 40px 20px;
+      padding: 40px;
     }
 
     .case {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #ddd;
+      background: #fff;
       border-radius: 10px;
+      overflow: hidden;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .case:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .case img {
@@ -108,18 +123,14 @@
     }
 
     .case .content {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 10px 15px;
-      border-radius: 8px;
-      text-align: left;
+      padding: 15px;
+      text-align: center;
     }
 
     .case .content h3 {
       font-size: 16px;
       font-weight: bold;
+      margin-bottom: 5px;
     }
 
     .case .content span {
@@ -146,38 +157,24 @@
       <p>Explore the world of AI and creativity through insightful articles, unique case studies, and practical tools for innovators and thinkers.</p>
     </div>
     <div class="image">
-      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Hero Image">
+      <img src="https://images.unsplash.com/photo-1581092337775-0d174c7fdbb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800" alt="Hero Image">
     </div>
   </section>
 
   <!-- Case Section -->
   <section class="cases">
     <div class="case">
-      <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 1">
+      <img src="https://images.unsplash.com/photo-1573497019414-cbc22c1ff5d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 1">
       <div class="content">
-        <h3>Hunting for Financial Stocks</h3>
-        <span>GAME</span>
+        <h3>Project 1</h3>
+        <span>Game</span>
       </div>
     </div>
     <div class="case">
       <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 2">
       <div class="content">
-        <h3>Alpindustria</h3>
-        <span>E-COMMERCE</span>
-      </div>
-    </div>
-    <div class="case">
-      <img src="https://images.unsplash.com/photo-1573497019414-cbc22c1ff5d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 3">
-      <div class="content">
-        <h3>Zen</h3>
-        <span>LANDING PAGE</span>
-      </div>
-    </div>
-    <div class="case">
-      <img src="https://images.unsplash.com/photo-1559028012-d2f599f9a4b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=600" alt="Case Image 4">
-      <div class="content">
-        <h3>IOGINALITY</h3>
-        <span>WEB 3.0</span>
+        <h3>Project 2</h3>
+        <span>E-commerce</span>
       </div>
     </div>
   </section>
